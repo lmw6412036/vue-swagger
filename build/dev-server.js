@@ -1,17 +1,14 @@
 require('./check-versions')()
+require('./makeData')()
 
 var config = require('../config')
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
 
-//读取配置，生成配置文件
-var fs=require('fs')
-var glob=require('glob')
-var thunkify=require('thunkify')
-var tampArr=glob.sync(__dirname+'/../data/?(data|service)/*.json')
 /*thunkify(fs.readFile)(tampArr[0],'utf8')(function (err,res) {
 })*/
+
 
 
 
