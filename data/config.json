@@ -1,3 +1,38 @@
 {
-
+  "name": "接口",
+  "description": "接口测试",
+  "tags": [
+    {
+      "name": "基础接口",
+      "description": "",
+      "sort": 1
+    },
+    {
+      "name": "医院",
+      "description": "",
+      "sort": 2
+    }
+  ],
+  "services": [
+    {
+      "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "sourceMap": true
+      },
+      "exclude": [
+        "node_modules"
+      ]
+    },
+    {
+      "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "sourceMap": true
+      },
+      "exclude": [
+        "node_modules"
+      ]
+    }
+  ]
 }

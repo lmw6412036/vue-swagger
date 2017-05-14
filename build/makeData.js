@@ -6,7 +6,7 @@ var fs=require('fs')
 var glob=require('glob')
 var thunkify=require('thunkify')
 var tampArr=glob.sync(__dirname+'/../data/?(tags|service)/*.json')
-var tags=[],services=[]
+var tags = [], services = [], config = {}
 function run(fn) {
   var gen = fn();
   function next(err, data) {
@@ -19,14 +19,24 @@ function run(fn) {
 
 module.exports=function () {
   run(function *() {
+    let file = __dirname + '/../data/config.json'
+    let res = yield thunkify(fs.readFile)(file, 'utf8');
+    config = JSON.parse(res);
     for(i in tampArr){
-      var res=yield thunkify(fs.readFile)(tampArr[i],'utf8');
+      res = yield thunkify(fs.readFile)(tampArr[i], 'utf8');
       if(tampArr[i].indexOf('tags')>=0){
-        tags.push(res);
+        tags.push(JSON.parse(res));
       }else if(tampArr[i].indexOf('service')>=0){
-        services.push(res);
+        services.push(JSON.parse(res));
       }
+      config.tags = tags;
+      config.services = services;
     }
-    console.log(tags,services);
+    //
+    fs.writeFile(file,JSON.stringify(config,function (key,value) {
+      return value;
+    },2),function (err,res) {
+      console.log('ok');
+    })
   });
 }
