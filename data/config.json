@@ -1,15 +1,24 @@
 {
-  "name": "接口",
+  "name": "广济互联网医院接口在线调试",
   "description": "接口测试",
+  "URL": "//",
+  "params": {
+    "spid": "1001",
+    "channel": "4",
+    "format": "JSON",
+    "oper": "127.0.0.1",
+    "random": 6511,
+    "sign": "23da0da7396feeaf060e910ebd195eca"
+  },
   "tags": [
     {
       "name": "基础接口",
-      "description": "",
+      "description": "基础接口定义",
       "sort": 1
     },
     {
       "name": "医院",
-      "description": "",
+      "description": "医院相关接口",
       "sort": 2
     }
   ],

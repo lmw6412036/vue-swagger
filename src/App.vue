@@ -10,14 +10,13 @@ export default {
 }
 </script>
 
-<style>
-*{
-  margin: 0;
-  padding: 0
-}
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+<style lang="scss">
+  @import "common/common.scss";
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 80%;
+    margin:0 auto;
+  }
 </style>
