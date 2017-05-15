@@ -14,12 +14,20 @@
     {
       "name": "基础接口",
       "description": "基础接口定义",
-      "sort": 1
+      "sort": 1,
+      "id": "base"
     },
     {
       "name": "医院",
       "description": "医院相关接口",
-      "sort": 2
+      "sort": 2,
+      "id": "hos"
+    },
+    {
+      "name": "用户",
+      "description": "用户相关接口",
+      "sort": 3,
+      "id": "user"
     }
   ],
   "services": [
@@ -31,7 +39,8 @@
       },
       "exclude": [
         "node_modules"
-      ]
+      ],
+      "id": "d1"
     },
     {
       "compilerOptions": {
@@ -41,7 +50,8 @@
       },
       "exclude": [
         "node_modules"
-      ]
+      ],
+      "id": "d2"
     }
   ]
 }
