@@ -6,6 +6,7 @@ import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
+window.bus = new Vue()
 
 /* eslint-disable no-new */
 new Vue({
@@ -13,5 +14,5 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: { App }
+  components: {App}
 })

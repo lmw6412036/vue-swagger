@@ -23,7 +23,7 @@
           <ol v-if="item.show">
             <li v-for="(o,i) in services" v-if="o.tag == item.id">
               <h6>
-                <span class="nmbers">{{i+1}}、</span>
+                <span class="nmbers">{{i + 1}}、</span>
                 <span class="method">post</span>
                 <span class="name">{{o.id}}</span>
                 <b>{{o.name}}</b>
@@ -119,12 +119,12 @@
           color: #999;
         }
       }
-      ol{
-        li{
-          h6{
+      ol {
+        li {
+          h6 {
             line-height: 35px;
             overflow: hidden;
-            p{
+            p {
               float: right;
               color: #999;
             }
