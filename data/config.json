@@ -32,26 +32,19 @@
   ],
   "services": [
     {
-      "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "sourceMap": true
-      },
-      "exclude": [
-        "node_modules"
+      "tag": "hos",
+      "name": "医生列表",
+      "description": "医生列表",
+      "params": [
+        {
+          "name": "pageSize",
+          "type": "number",
+          "text": "每页条数",
+          "value": "10"
+        }
       ],
-      "id": "d1"
-    },
-    {
-      "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "sourceMap": true
-      },
-      "exclude": [
-        "node_modules"
-      ],
-      "id": "d2"
+      "sort": 1,
+      "id": "nethos.doc.list"
     }
   ]
 }
